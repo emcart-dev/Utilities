@@ -1,6 +1,5 @@
 //      TRANSFORMING STRINGS
 //      This class consists of two methods; Reverse & ToTitleCase.
-
 public class StringTransform {
     //  Reverses a given string //
     public static string Reverse(string input) {
@@ -16,7 +15,6 @@ public class StringTransform {
         string reversedString = new string(revStr);
         return reversedString;
     }
-
 
     //  Converts a given string to Title Case //
     public static string ToTitleCase(string input) {
