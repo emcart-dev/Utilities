@@ -1,0 +1,54 @@
+   EXPECTED BEHAVIOURS:     
+⦿       All runs of whitespace → single space
+⦿       eading/trailing whitespace → trimmed
+⦿       Whitespace includes: spaces, tabs, newlines
+⦿       null → throws ArgumentNullException
+   
+   
+   EXAMPLES OF INPUT/OUTPUTS
+
+--------------  1. --------------
+INPUT: Null
+OUTPUT: exception
+**This is an error test**
+--------------  2. --------------
+INPUT: "a b"
+OUTPUT: "a b"
+--------------  3. --------------
+INPUT: " a b "
+OUTPUT: "a b"
+**Decide if trim is included**
+--------------  4. --------------
+INPUT: "\tHello\nWorld"
+OUTPUT: "Hello World"
+--------------  5. --------------
+INPUT: "hello    world"
+OUTPUT: "hello world"
+--------------  6. --------------
+INPUT: "   hello world"
+OUTPUT: "hello world"
+--------------  7. --------------
+INPUT: "hello world   "
+OUTPUT: "hello world"
+--------------  8. --------------
+INPUT: "   hello world   "
+OUTPUT: "hello world"
+--------------  9. --------------
+INPUT: "hello\t\tworld"
+OUTPUT: "hello world"
+--------------  10. --------------
+INPUT: "hello\n\nworld"
+OUTPUT: "hello world"
+--------------  11. --------------
+INPUT: "hello \t \n world"
+OUTPUT: "hello world"
+--------------  12. --------------
+INPUT: ""
+OUTPUT: ""
+--------------  13. --------------
+INPUT: "     "
+OUTPUT: ""
+--------------  14. --------------
+INPUT: "\t \n \r"
+OUTPUT: ""
+--------------------------------

@@ -14,8 +14,8 @@ public class StringTransform {
         //  Convert the char array into a new string
         string reversedString = new string(revStr);
         return reversedString;
-    }
-
+    }           
+                
     //  Converts a given string to Title Case //
     public static string ToTitleCase(string input) {
         //  Create an array and split the string into respective words
