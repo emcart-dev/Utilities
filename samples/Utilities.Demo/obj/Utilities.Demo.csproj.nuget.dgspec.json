@@ -1,0 +1,132 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/emilycartwright/Documents/LeetCode/Utilities/samples/Utilities.Demo/Utilities.Demo.csproj": {}
+  },
+  "projects": {
+    "/Users/emilycartwright/Documents/LeetCode/Utilities/samples/Utilities.Demo/Utilities.Demo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/emilycartwright/Documents/LeetCode/Utilities/samples/Utilities.Demo/Utilities.Demo.csproj",
+        "projectName": "Utilities.Demo",
+        "projectPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/samples/Utilities.Demo/Utilities.Demo.csproj",
+        "packagesPath": "/Users/emilycartwright/.nuget/packages/",
+        "outputPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/samples/Utilities.Demo/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/emilycartwright/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/9.0.112/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/Utilities.csproj": {
+                "projectPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/9.0.112/libexec/sdk/9.0.112/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/Utilities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/Utilities.csproj",
+        "projectName": "Utilities",
+        "projectPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/Utilities.csproj",
+        "packagesPath": "/Users/emilycartwright/.nuget/packages/",
+        "outputPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/emilycartwright/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/9.0.112/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/9.0.112/libexec/sdk/9.0.112/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Utilities\Utilities.csproj" />
+    <ProjectReference Include="/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/Utilities.csproj" />
   </ItemGroup>
 
 </Project>
