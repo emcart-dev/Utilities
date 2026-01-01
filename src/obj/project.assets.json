@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {
-      "Utilities/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "compile": {
-          "bin/placeholder/Utilities.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Utilities.dll": {}
-        }
-      }
-    }
+    "net10.0": {}
   },
-  "libraries": {
-    "Utilities/1.0.0": {
-      "type": "project",
-      "path": "../../src/Utilities.csproj",
-      "msbuildProject": "../../src/Utilities.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net10.0": [
-      "Utilities >= 1.0.0"
-    ]
+    "net10.0": []
   },
   "packageFolders": {
     "/Users/emilycartwright/.nuget/packages/": {}
@@ -32,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/Utilities.Tests.csproj",
-      "projectName": "Utilities.Tests",
-      "projectPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/Utilities.Tests.csproj",
+      "projectUniqueName": "/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities.csproj",
+      "projectName": "Utilities",
+      "projectPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities.csproj",
       "packagesPath": "/Users/emilycartwright/.nuget/packages/",
-      "outputPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/obj/",
+      "outputPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/src/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/emilycartwright/.nuget/NuGet/NuGet.Config"
@@ -50,11 +31,7 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {
-            "/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities.csproj": {
-              "projectPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

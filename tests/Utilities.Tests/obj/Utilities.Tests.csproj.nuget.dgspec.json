@@ -4,14 +4,14 @@
     "/Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/Utilities.Tests.csproj": {}
   },
   "projects": {
-    "/Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/Utilities.Tests.csproj": {
+    "/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/Utilities.Tests.csproj",
-        "projectName": "Utilities.Tests",
-        "projectPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/Utilities.Tests.csproj",
+        "projectUniqueName": "/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities.csproj",
+        "projectName": "Utilities",
+        "projectPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities.csproj",
         "packagesPath": "/Users/emilycartwright/.nuget/packages/",
-        "outputPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/obj/",
+        "outputPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/src/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/emilycartwright/.nuget/NuGet/NuGet.Config"
@@ -25,11 +25,7 @@
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
-            "projectReferences": {
-              "/Users/emilycartwright/Documents/LeetCode/Utilities/Utilities.csproj": {
-                "projectPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/Utilities.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -341,14 +337,14 @@
         }
       }
     },
-    "/Users/emilycartwright/Documents/LeetCode/Utilities/Utilities.csproj": {
+    "/Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/Utilities.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/emilycartwright/Documents/LeetCode/Utilities/Utilities.csproj",
-        "projectName": "Utilities",
-        "projectPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/Utilities.csproj",
+        "projectUniqueName": "/Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/Utilities.Tests.csproj",
+        "projectName": "Utilities.Tests",
+        "projectPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/Utilities.Tests.csproj",
         "packagesPath": "/Users/emilycartwright/.nuget/packages/",
-        "outputPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/obj/",
+        "outputPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/emilycartwright/.nuget/NuGet/NuGet.Config"
@@ -362,7 +358,11 @@
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities.csproj": {
+                "projectPath": "/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
