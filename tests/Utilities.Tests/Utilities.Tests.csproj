@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Reference the Utilities library -->
+    <ProjectReference Include="Microsoft.NET.Test.Sdk" Version="*" />
     <ProjectReference Include="/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/Utilities.csproj" />
   </ItemGroup>
 
