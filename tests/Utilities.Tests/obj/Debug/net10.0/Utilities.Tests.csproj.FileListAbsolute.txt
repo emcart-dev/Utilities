@@ -1,3 +1,4 @@
+/Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/obj/Debug/net10.0/Utilities.Tests.csproj.AssemblyReference.cache
 /Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/obj/Debug/net10.0/Utilities.Tests.GeneratedMSBuildEditorConfig.editorconfig
 /Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/obj/Debug/net10.0/Utilities.Tests.AssemblyInfoInputs.cache
 /Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/obj/Debug/net10.0/Utilities.Tests.AssemblyInfo.cs

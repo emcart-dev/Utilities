@@ -1,0 +1,12 @@
+/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/bin/Debug/net10.0/Utilities.deps.json
+/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/bin/Debug/net10.0/Utilities.dll
+/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/bin/Debug/net10.0/Utilities.pdb
+/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/obj/Debug/net10.0/Utilities.GeneratedMSBuildEditorConfig.editorconfig
+/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/obj/Debug/net10.0/Utilities.AssemblyInfoInputs.cache
+/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/obj/Debug/net10.0/Utilities.AssemblyInfo.cs
+/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/obj/Debug/net10.0/Utilities.csproj.CoreCompileInputs.cache
+/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/obj/Debug/net10.0/Utilities.sourcelink.json
+/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/obj/Debug/net10.0/Utilities.dll
+/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/obj/Debug/net10.0/refint/Utilities.dll
+/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/obj/Debug/net10.0/Utilities.pdb
+/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/obj/Debug/net10.0/ref/Utilities.dll

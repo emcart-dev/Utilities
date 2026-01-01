@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <!-- Reference the Utilities library -->
-    <ProjectReference Include="/Users/emilycartwright/Documents/LeetCode/Utilities/Utilities.csproj" />
+    <ProjectReference Include="/Users/emilycartwright/Documents/LeetCode/Utilities/tests/Utilities.Tests/Utilities.Tests.csproj" />
   </ItemGroup>
 
 </Project>
