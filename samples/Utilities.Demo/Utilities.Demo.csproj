@@ -2,13 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <IsPackable>false</IsPackable>
+    <OutputType>Exe</OutputType>
   </PropertyGroup>
 
-
   <ItemGroup>
-    <!-- Reference the Utilities library -->
-    <ProjectReference Include="/Users/emilycartwright/Documents/LeetCode/Utilities/Utilities.csproj" />
+    <ProjectReference Include="..\src\Utilities\Utilities.csproj" />
   </ItemGroup>
 
 </Project>

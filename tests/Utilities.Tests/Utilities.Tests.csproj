@@ -3,13 +3,19 @@
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="Microsoft.NET.Test.Sdk" Version="*" />
-    <ProjectReference Include="/Users/emilycartwright/Documents/LeetCode/Utilities/src/Utilities/Utilities.csproj" />
+    <!-- Reference your library project -->
+    <ProjectReference Include="..\..\src\Utilities\Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Test packages -->
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="*" />
+    <PackageReference Include="xunit" Version="*" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="*" />
   </ItemGroup>
 
 </Project>
-
-
