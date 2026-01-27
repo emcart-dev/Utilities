@@ -1,176 +1,79 @@
-// MICROSOFT MEL04/MEL05 DELIVERY ID/ACCESS ID GENERATOR 
-import java.util.*;
+// Delivery ID Generator for MEL04 & MEL05
+using System;
 
-// ID Generator class
-public class DeliveryIDGenerator {
-	public static void main(String[] args) {
-		System.out.println("\nWelcome to Delivery/Access ID Generator\n");
-		Scanner k = new Scanner(System.in);
-		Random digits = new Random();
-		
-		while (true) {
-			System.out.println("SELECT SITE FOR ID GENERATION: ");
-			System.out.print("(1)  MEL04 \n(2)  MEL05 \n(0)  Quit Program\n\nSelection: ");
-		
-			String siteOpt = k.nextLine();
-		
-			// Close the program if 0 is selected. 
-			if ("0".equals(siteOpt)) {
-				System.out.println("Ending Program. Goodbye.");
-				break;
-			}
-			
-			// If user selects 1 - MEL04
-			if ("1".equals(siteOpt)) {
-				Site site = new Site("MEL04", "MS04");
-				System.out.println(site);
-				String siteStr = site.getSiteCode();
-				
-				while (true) {
-					// Get letter for type of delivery/pickup
-					System.out.println("SELECT DELIVERY/PICKUP TYPE:");
-					System.out.print("(P)  for Purchase Order deliveries \n(R)  for RMA deliveries/pickups \n(T)  for Transfer Orders\n(O)  for all Other deliveries/pickups\n\nSelection: ");
-					String typeOpt = k.nextLine().toUpperCase();
-					
-					// If user selects P - Purchase Order
-					if ("P".equals(typeOpt)) {
-						DeliveryType type = new DeliveryType("P", "P");
-						String typeStr = type.getTypeCode();
-						
-						// Add 3 Random digits to complete ID Generation
-						int randNum = digits.nextInt(1000); 
-						String threeNums = String.format("%03d", randNum);
-						
-						System.out.println(siteStr + typeStr + threeNums + "\n");
-						break;
-					} 
-				
-					// If user selects RMA - RMA Receivals/Collections				
-					else if ("R".equals(typeOpt)) {
-						DeliveryType type = new DeliveryType("R", "RMA");
-						String typeStr = type.getTypeCode();
-						
-						// Add 3 Random digits to complete ID Generation
-						int randNum = digits.nextInt(1000); 
-						String threeNums = String.format("%03d", randNum);
-						
-						System.out.println(siteStr + typeStr + threeNums + "\n");
-						break;
-					} 
-				
-					// If user selects T - Transfer Order				
-					else if ("T".equals(typeOpt)) {
-						DeliveryType type = new DeliveryType("T", "T");
-						String typeStr = type.getTypeCode();
-						
-						// Add 3 Random digits to complete ID Generation
-						int randNum = digits.nextInt(1000); 
-						String threeNums = String.format("%03d", randNum);
-						
-						System.out.println(siteStr + typeStr + threeNums + "\n");
-						break;
-					} 
-				
-					// If user selects O - Any Other Deliveries or Pickups	
-					else if ("O".equals(typeOpt)) {
-						DeliveryType type = new DeliveryType("O", "O");
-						String typeStr = type.getTypeCode();
-						
-						// Add 3 Random digits to complete ID Generation
-						int randNum = digits.nextInt(1000); 
-						String threeNums = String.format("%03d", randNum);
-						
-						System.out.println(siteStr + typeStr + threeNums + "\n");
-						break;
-					}
-				
-					// If invalid selection 
-					else {
-						System.out.println("Invalid Selection. Please try again.\n");
-						continue;	
-					}					
-				}
-				
-				
-				
-			// If user selects 2 - MEL05	
-			} else if ("2".equals(siteOpt)) {
-				Site site = new Site("MEL05", "MS05");
-				System.out.println(site);
-				String siteStr = site.getSiteCode();
-				
-				while (true) {
-					// Get letter for type of delivery/pickup
-					System.out.println("SELECT DELIVERY/PICKUP TYPE:");
-					System.out.print("(P)  for Purchase Order deliveries \n(R)  for RMA deliveries/pickups \n(T)  for Transfer Orders\n(O)  for all Other deliveries/pickups\n\nSelection: ");
-					String typeOpt = k.nextLine().toUpperCase();
-			
-					// If user selects P - Purchase Order
-					if ("P".equals(typeOpt)) {
-						DeliveryType type = new DeliveryType("P", "P");
-						String typeStr = type.getTypeCode();
-						
-						// Add 3 Random digits to complete ID Generation
-						int randNum = digits.nextInt(1000); 
-						String threeNums = String.format("%03d", randNum);
-						System.out.println(siteStr + typeStr + threeNums + "\n");
-						break;
-					} 
-				
-					// If user selects RMA - RMA Receivals/Collections				
-					else if ("R".equals(typeOpt)) {
-						DeliveryType type = new DeliveryType("R", "RMA");
-						String typeStr = type.getTypeCode();						
-						
-						// Add 3 Random digits to complete ID Generation
-						int randNum = digits.nextInt(1000); 
-						String threeNums = String.format("%03d", randNum);
-						System.out.println(siteStr + typeStr + threeNums + "\n");
-						break;
-					} 
-				
-					// If user selects T - Transfer Order				
-					else if ("T".equals(typeOpt)) {
-						DeliveryType type = new DeliveryType("T", "T");
-						String typeStr = type.getTypeCode();						
-						
-						// Add 3 Random digits to complete ID Generation
-						int randNum = digits.nextInt(1000); 
-						String threeNums = String.format("%03d", randNum);
-						System.out.println(siteStr + typeStr + threeNums + "\n");
-						break;
-					} 
-				
-					// If user selects O - Any Other Deliveries or Pickups	
-					else if ("O".equals(typeOpt)) {
-						DeliveryType type = new DeliveryType("O", "O");
-						String typeStr = type.getTypeCode();						
-						
-						// Add 3 Random digits to complete ID Generation
-						int randNum = digits.nextInt(1000); 
-						String threeNums = String.format("%03d", randNum);
-						System.out.println(siteStr + typeStr + threeNums + "\n");
-						break;
-					}
-				
-					// If invalid selection 
-					else {
-						System.out.println("Invalid Selection. Please try again.\n");
-						continue;	
-					}
-				}					
-			} 
-			
-			// If invalid selection
-			else {
-				System.out.println("Invalid Selection. Please try again.\n");
-				continue;
-			}
-		}
-		
-		k.close();
-	}
+public class DeliveryID_Generator
+{
+    private static Random digits = new Random();
+
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("\nWelcome to Delivery/Access ID Generator\n");
+
+        while (true)
+        {
+            string siteCode = GetSiteSelection();
+            if (siteCode == null) break;  // User chose to quit
+
+            string typeCode = GetDeliveryType();
+            if (typeCode == null) break;  // Invalid, retry
+
+            string id = GenerateID(siteCode, typeCode);
+            Console.WriteLine($"\nGenerated Delivery ID: {id}\n");
+        }
+
+        Console.WriteLine("Program ended. Goodbye..");
+    }
+
+    // ============== SITE SELECTION ==============
+    static string GetSiteSelection()
+    {
+        while (true)
+        {
+            Console.WriteLine("SELECT SITE FOR ID GENERATION:");
+            Console.Write("(1)  MEL04 \n(2)  MEL05 \n(0)  Quit Program\n\nSelection: ");
+
+            string input = Console.ReadLine();
+
+            switch (input)
+            {
+                case "1": return "MS04";
+                case "2": return "MS05";
+                case "0": return null;
+                default:
+                    Console.WriteLine("Invalid selection. Try again.\n");
+                    break;
+            }
+        }
+    }
+
+    // ============== DELIVERY TYPE ==============
+    static string GetDeliveryType()
+    {
+        while (true)
+        {
+            Console.WriteLine("\nSELECT DELIVERY/PICKUP TYPE:");
+			Console.Write("(P)  for Purchase Order deliveries \n(R)  for RMA deliveries/pickups \n(T)  for Transfer Orders\n(O)  for all Other deliveries/pickups\n\nSelection: ");
+
+            string input = Console.ReadLine()?.ToUpper();
+
+            switch (input)
+            {
+                case "P": return "P";
+                case "R": return "RMA";
+                case "T": return "T";
+                case "O": return "O";
+                default:
+                    Console.WriteLine("Invalid selection. Try again.\n");
+                    break;
+            }
+        }
+    }
+
+    // ============== ID GENERATION ==============
+    static string GenerateID(string site, string type)
+    {
+        int number = digits.Next(1000);
+        string threeDigits = number.ToString("D3");
+        return site + type + threeDigits;
+    }
 }
-
-
-
