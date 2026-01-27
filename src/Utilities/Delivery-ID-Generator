@@ -1,91 +1,176 @@
-// Delivery ID/Access ID Generator for delivery/pickup drivers at MEL04 & MEL05.
+// MICROSOFT MEL04/MEL05 DELIVERY ID/ACCESS ID GENERATOR 
+import java.util.*;
 
-Print "Welcome to Delivery/Access ID Generator".
-
-print menu:
-	(1)  MEL04 ID Generator
-	(2)  MEL05 ID Generator
-	(0)  Quit Program
-
-For (1) MEL04 selection:
-
-	Request user input details:
-		print options:
-			Select one of the following: 
+// ID Generator class
+public class DeliveryIDGenerator {
+	public static void main(String[] args) {
+		System.out.println("\nWelcome to Delivery/Access ID Generator\n");
+		Scanner k = new Scanner(System.in);
+		Random digits = new Random();
+		
+		while (true) {
+			System.out.println("SELECT SITE FOR ID GENERATION: ");
+			System.out.print("(1)  MEL04 \n(2)  MEL05 \n(0)  Quit Program\n\nSelection: ");
+		
+			String siteOpt = k.nextLine();
+		
+			// Close the program if 0 is selected. 
+			if ("0".equals(siteOpt)) {
+				System.out.println("Ending Program. Goodbye.");
+				break;
+			}
 			
-			'P' for Purchase Order deliveries
-			'RMA' for RMA deliveries/pickups
-			'T' for Transfer Order deliveries/pickups 
-			'O' for all Other deliveries/pickups
-			
-			if 'P' (to upper case) is selected:
-				create ID string
-				delID = "MS04P"
+			// If user selects 1 - MEL04
+			if ("1".equals(siteOpt)) {
+				Site site = new Site("MEL04", "MS04");
+				System.out.println(site);
+				String siteStr = site.getSiteCode();
 				
-				generate random 3 integers
-					these 3 ints can't already exist in Delivery ID file 'Delivery ID Log.txt'
-					loop again until the 3 ints are not in file
-					int nums = 3 generated integers
-					return nums
+				while (true) {
+					// Get letter for type of delivery/pickup
+					System.out.println("SELECT DELIVERY/PICKUP TYPE:");
+					System.out.print("(P)  for Purchase Order deliveries \n(R)  for RMA deliveries/pickups \n(T)  for Transfer Orders\n(O)  for all Other deliveries/pickups\n\nSelection: ");
+					String typeOpt = k.nextLine().toUpperCase();
 					
-				turn nums into string data type
+					// If user selects P - Purchase Order
+					if ("P".equals(typeOpt)) {
+						DeliveryType type = new DeliveryType("P", "P");
+						String typeStr = type.getTypeCode();
+						
+						// Add 3 Random digits to complete ID Generation
+						int randNum = digits.nextInt(1000); 
+						String threeNums = String.format("%03d", randNum);
+						
+						System.out.println(siteStr + typeStr + threeNums + "\n");
+						break;
+					} 
 				
-				append nums to delID
-				print delID
-				save delID to 'Delivery ID Log.txt'
-				return to main menu
+					// If user selects RMA - RMA Receivals/Collections				
+					else if ("R".equals(typeOpt)) {
+						DeliveryType type = new DeliveryType("R", "RMA");
+						String typeStr = type.getTypeCode();
+						
+						// Add 3 Random digits to complete ID Generation
+						int randNum = digits.nextInt(1000); 
+						String threeNums = String.format("%03d", randNum);
+						
+						System.out.println(siteStr + typeStr + threeNums + "\n");
+						break;
+					} 
 				
+					// If user selects T - Transfer Order				
+					else if ("T".equals(typeOpt)) {
+						DeliveryType type = new DeliveryType("T", "T");
+						String typeStr = type.getTypeCode();
+						
+						// Add 3 Random digits to complete ID Generation
+						int randNum = digits.nextInt(1000); 
+						String threeNums = String.format("%03d", randNum);
+						
+						System.out.println(siteStr + typeStr + threeNums + "\n");
+						break;
+					} 
+				
+					// If user selects O - Any Other Deliveries or Pickups	
+					else if ("O".equals(typeOpt)) {
+						DeliveryType type = new DeliveryType("O", "O");
+						String typeStr = type.getTypeCode();
+						
+						// Add 3 Random digits to complete ID Generation
+						int randNum = digits.nextInt(1000); 
+						String threeNums = String.format("%03d", randNum);
+						
+						System.out.println(siteStr + typeStr + threeNums + "\n");
+						break;
+					}
+				
+					// If invalid selection 
+					else {
+						System.out.println("Invalid Selection. Please try again.\n");
+						continue;	
+					}					
+				}
+				
+				
+				
+			// If user selects 2 - MEL05	
+			} else if ("2".equals(siteOpt)) {
+				Site site = new Site("MEL05", "MS05");
+				System.out.println(site);
+				String siteStr = site.getSiteCode();
+				
+				while (true) {
+					// Get letter for type of delivery/pickup
+					System.out.println("SELECT DELIVERY/PICKUP TYPE:");
+					System.out.print("(P)  for Purchase Order deliveries \n(R)  for RMA deliveries/pickups \n(T)  for Transfer Orders\n(O)  for all Other deliveries/pickups\n\nSelection: ");
+					String typeOpt = k.nextLine().toUpperCase();
+			
+					// If user selects P - Purchase Order
+					if ("P".equals(typeOpt)) {
+						DeliveryType type = new DeliveryType("P", "P");
+						String typeStr = type.getTypeCode();
+						
+						// Add 3 Random digits to complete ID Generation
+						int randNum = digits.nextInt(1000); 
+						String threeNums = String.format("%03d", randNum);
+						System.out.println(siteStr + typeStr + threeNums + "\n");
+						break;
+					} 
+				
+					// If user selects RMA - RMA Receivals/Collections				
+					else if ("R".equals(typeOpt)) {
+						DeliveryType type = new DeliveryType("R", "RMA");
+						String typeStr = type.getTypeCode();						
+						
+						// Add 3 Random digits to complete ID Generation
+						int randNum = digits.nextInt(1000); 
+						String threeNums = String.format("%03d", randNum);
+						System.out.println(siteStr + typeStr + threeNums + "\n");
+						break;
+					} 
+				
+					// If user selects T - Transfer Order				
+					else if ("T".equals(typeOpt)) {
+						DeliveryType type = new DeliveryType("T", "T");
+						String typeStr = type.getTypeCode();						
+						
+						// Add 3 Random digits to complete ID Generation
+						int randNum = digits.nextInt(1000); 
+						String threeNums = String.format("%03d", randNum);
+						System.out.println(siteStr + typeStr + threeNums + "\n");
+						break;
+					} 
+				
+					// If user selects O - Any Other Deliveries or Pickups	
+					else if ("O".equals(typeOpt)) {
+						DeliveryType type = new DeliveryType("O", "O");
+						String typeStr = type.getTypeCode();						
+						
+						// Add 3 Random digits to complete ID Generation
+						int randNum = digits.nextInt(1000); 
+						String threeNums = String.format("%03d", randNum);
+						System.out.println(siteStr + typeStr + threeNums + "\n");
+						break;
+					}
+				
+					// If invalid selection 
+					else {
+						System.out.println("Invalid Selection. Please try again.\n");
+						continue;	
+					}
+				}					
+			} 
+			
+			// If invalid selection
+			else {
+				System.out.println("Invalid Selection. Please try again.\n");
+				continue;
+			}
+		}
+		
+		k.close();
+	}
+}
 
-			if 'RMA' (to upper case) is selected:
-				create ID string
-				delID = "MS04RMA"
-				
-				generate random 3 integers
-					these 3 ints can't already exist in Delivery ID file 'Delivery ID Log.txt'
-					loop again until the 3 ints are not in file
-					int nums = 3 generated integers
-					return nums
-					
-				turn nums into string data type
-				
-				append nums to delID
-				print delID
-				save delID to 'Delivery ID Log.txt'
-				return to main menu
-				
-				
-			if 'T' (to upper case) is selected:
-				create ID string
-				delID = "MS04T"				
-			
-				generate random 3 integers
-					these 3 ints can't already exist in Delivery ID file 'Delivery ID Log.txt'
-					loop again until the 3 ints are not in file
-					int nums = 3 generated integers
-					return nums
-					
-				turn nums into string data type
-				
-				append nums to delID
-				print delID
-				save delID to 'Delivery ID Log.txt'
-				return to main menu			
-				
-				
-			if 'O' (to upper case) is selected:
-				create ID string
-				delID = "MS04O"
-				
-				generate random 3 integers
-					these 3 ints can't already exist in Delivery ID file 'Delivery ID Log.txt'
-					loop again until the 3 ints are not in file
-					int nums = 3 generated integers
-					return nums
-					
-				turn nums into string data type
-				
-				append nums to delID
-				print delID
-				save delID to 'Delivery ID Log.txt'
-				return to main menu	
-				
+
+
