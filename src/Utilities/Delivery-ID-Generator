@@ -1,2 +1,91 @@
-// Delivery ID Generator
+// Delivery ID/Access ID Generator for delivery/pickup drivers at MEL04 & MEL05.
 
+Print "Welcome to Delivery/Access ID Generator".
+
+print menu:
+	(1)  MEL04 ID Generator
+	(2)  MEL05 ID Generator
+	(0)  Quit Program
+
+For (1) MEL04 selection:
+
+	Request user input details:
+		print options:
+			Select one of the following: 
+			
+			'P' for Purchase Order deliveries
+			'RMA' for RMA deliveries/pickups
+			'T' for Transfer Order deliveries/pickups 
+			'O' for all Other deliveries/pickups
+			
+			if 'P' (to upper case) is selected:
+				create ID string
+				delID = "MS04P"
+				
+				generate random 3 integers
+					these 3 ints can't already exist in Delivery ID file 'Delivery ID Log.txt'
+					loop again until the 3 ints are not in file
+					int nums = 3 generated integers
+					return nums
+					
+				turn nums into string data type
+				
+				append nums to delID
+				print delID
+				save delID to 'Delivery ID Log.txt'
+				return to main menu
+				
+
+			if 'RMA' (to upper case) is selected:
+				create ID string
+				delID = "MS04RMA"
+				
+				generate random 3 integers
+					these 3 ints can't already exist in Delivery ID file 'Delivery ID Log.txt'
+					loop again until the 3 ints are not in file
+					int nums = 3 generated integers
+					return nums
+					
+				turn nums into string data type
+				
+				append nums to delID
+				print delID
+				save delID to 'Delivery ID Log.txt'
+				return to main menu
+				
+				
+			if 'T' (to upper case) is selected:
+				create ID string
+				delID = "MS04T"				
+			
+				generate random 3 integers
+					these 3 ints can't already exist in Delivery ID file 'Delivery ID Log.txt'
+					loop again until the 3 ints are not in file
+					int nums = 3 generated integers
+					return nums
+					
+				turn nums into string data type
+				
+				append nums to delID
+				print delID
+				save delID to 'Delivery ID Log.txt'
+				return to main menu			
+				
+				
+			if 'O' (to upper case) is selected:
+				create ID string
+				delID = "MS04O"
+				
+				generate random 3 integers
+					these 3 ints can't already exist in Delivery ID file 'Delivery ID Log.txt'
+					loop again until the 3 ints are not in file
+					int nums = 3 generated integers
+					return nums
+					
+				turn nums into string data type
+				
+				append nums to delID
+				print delID
+				save delID to 'Delivery ID Log.txt'
+				return to main menu	
+				
