@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Delivery ID Generator</title>
+    <style>
+        body { font-family: Segoe UI, Arial; padding: 20px; }
+        select, button { padding: 6px; margin-top: 6px; }
+        #result { margin-top: 15px; font-size: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<h2>Delivery / Access ID Generator</h2>
+
+<label>Site:</label><br>
+<select id="site">
+    <option value="MS04">MEL04</option>
+    <option value="MS05">MEL05</option>
+</select>
+
+<br><br>
+
+<label>Delivery Type:</label><br>
+<select id="type">
+    <option value="P">Purchase Order</option>
+    <option value="RMA">RMA</option>
+    <option value="T">Transfer</option>
+    <option value="O">Other</option>
+</select>
+
+<br><br>
+
+<button onclick="generateID()">Generate ID</button>
+
+<div id="result"></div>
+
+<script>
+function generateID() {
+    const site = document.getElementById("site").value;
+    const type = document.getElementById("type").value;
+    const number = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+    document.getElementById("result").innerText = site + type + number;
+}
+</script>
+
+</body>
+</html>
